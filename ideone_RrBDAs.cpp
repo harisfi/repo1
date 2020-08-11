@@ -1,7 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int bagi(int x){
+	int y=0;
+	for(int i=1;i<=x;i++){
+		if(x%i==0) y++;
+	}
+	return y;
+}
 int main() {
-	cout<<"Halo, dunia!"<<endl;
+	int n,x;
+	cin>>n;
+	for(int i=0;i<n;i++){
+		cin>>x;
+		if(bagi(x)<=4) cout<<"YA\n";
+		else cout<<"BUKAN\n";
+	}
 	return 0;
 }
